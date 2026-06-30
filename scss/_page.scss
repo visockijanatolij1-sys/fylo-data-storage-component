@@ -1,0 +1,191 @@
+@use "variables";
+
+.wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative;
+    z-index: 5;
+}
+
+.container{
+    max-width: 1250px;
+    padding: 0 auto;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.app{
+    max-width: 922px;
+    width: 100%;
+    min-height: 201px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+// =================================
+
+.app-files_container{
+    width: 350px;
+    height: 201px;
+
+    display: flex;
+    flex-direction: column;    
+    gap: 32px;
+    padding: 40px;
+
+    background-color: variables.$blue850;
+    border-radius: 10px 100px 10px 10px; 
+}
+.app-logo_container{
+    width: 135px;
+}
+.app-logo_container img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+.app-upload_block{
+    max-width: 176px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.app-upload_button{
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+
+    background-color: variables.$blue950;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease 0s;
+}
+
+.app-upload_button:hover{
+    background-color: variables.$blue850;
+    border: 2px solid variables.$blue950;
+}
+
+// =======================================
+
+.app-storage_container{
+    max-width: 540px;
+    width: 100%;
+    min-height: 154px;
+
+    background-color: variables.$blue850;
+    border-radius: 5px;
+    padding: 40px 38px;
+
+    align-self: flex-end;
+
+    position: relative;
+    z-index: 5;
+}
+.storage-text{
+    color: variables.$blue200;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 125%;
+    letter-spacing: 0px;
+}
+.storage-text span{
+    color: variables.$white;
+}
+.storage-space{
+    width: 179px;
+    height: 72px;
+    border-radius: 5px 5px 0px 5px;
+    background-color: variables.$white;
+
+    position: absolute;
+    right: 38px;
+    top: -50%;
+    transform: translateY(50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 40px;
+    line-height: 100%;
+    color: variables.$blue950;
+    font-weight: 700;
+    
+}
+.storage-space::after{
+    content: "";
+
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+
+    width: 0;
+    height: 0;
+
+    border-left: 20px solid transparent;
+    border-top: 20px solid #fff; 
+}
+.storage-space span{
+    font-size: 12px;
+    line-height: 115%;
+    font-weight: 700;
+    color: variables.$blue200;
+    padding-left: 8px;
+}
+
+.storage-progress{
+    margin-top: 16px;
+
+    max-width: 463px;
+    width: 100%;
+    height: 20px;
+    padding: 3px;
+    border-radius: 999px;
+    background-color: variables.$blue950;
+}
+.storage-progress-fill{
+    width: 81.5%;
+    height: 100%;
+    border-radius: 999px;
+    position: relative;
+
+    background: linear-gradient(to right, #FFA197, #FF4A95) ;
+}
+.storage-progress-fill::after{
+    content: "";
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: variables.$white;
+}
+.starage-capacity_block{
+    margin-top: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.capacity-start,
+.capacity-end{
+    color: variables.$blue200;
+    font-size: 12px;
+    line-height: 125%;
+    letter-spacing: 0px;
+    font-weight: 700;
+}
